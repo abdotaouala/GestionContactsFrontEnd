@@ -1,0 +1,53 @@
+<div class="container ">
+  <div class="panel panel-primary spacer" *ngIf="mode==1">
+    <div class="panel panel-heading">Nouveau contact</div>
+    <div class="panel panel-body">
+      <div class="form-group" action="">
+        <label for="nom">Nom</label>
+        <input class="form-control" [(ngModel)]="contact.nom" id="nom" type="text"/>
+
+        <label for="prenom">Prenom</label>
+        <input class="form-control" id="prenom" [(ngModel)]="contact.prenom" type="text"/>
+        <label for="dateNaissance">Date naissance</label>
+        <input class="form-control" id="dateNaissance" type="date"/>
+
+        <label for="tel">Tel</label>
+        <input class="form-control" id="tel" [(ngModel)]="contact.tel" type="text"/>
+
+        <label for="email">Email</label>
+        <input class="form-control" id="email" [(ngModel)]="contact.email" type="email"/>
+
+        <button class="btn btn-primary" (click)="saveContact()">save</button>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-primary spacer" *ngIf="mode==2">
+    <div class="panel panel-heading">Nouveau contact</div>
+    <div class="panel panel-body">
+      <div class="form-group">
+        <label>ID :</label>
+        <label>{{contact.id}}</label>
+      </div>
+      <div class="form-group">
+        <label>Nom :</label>
+        <label>{{contact.nom}}</label>
+      </div>
+        <div class="form-group">
+          <label>Prenom :</label>
+          <label>{{contact.prenom}}</label>
+        </div>
+        <div class="form-group">
+          <label>Tél :</label>
+          <label>{{contact.tel}}</label>
+        </div>
+        <div class="form-group">
+          <label>Email :</label>
+          <label>{{contact.email}}</label>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary" (click)="initaliseContact()">Nouveau contact</button>
+        </div>
+      </div>
+    </div>
+
+  </div>

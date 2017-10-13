@@ -1,0 +1,55 @@
+<div class="container spacer">
+  <div class="panel panel-primary">
+    <div class="panel-heading">Liste des contacts</div>
+    <div class="panel panel-body">
+      <form class="form-group">
+        <input class="form-control" type="text" [(ngModel)]="motCle" name="motCle"/>
+        <button class="btn btn-success" (click)="chercher()">Chercher</button>
+      </form>
+      <table class="table table-striped">
+        <tr>
+          <th>ID</th>
+          <th>Nom</th>
+          <th>Prénom</th>
+          <th>Email</th>
+          <th></th>
+          <th></th>
+        </tr>
+        <tr *ngFor="let c of pageContacts?.content">
+          <td>{{c.id}}</td>
+          <td>{{c.nom}}</td>
+          <td>{{c.prenom}}</td>
+          <td>{{c.email}}</td>
+          <td>
+            <button class="btn btn-danger" (click)="chargeid(c)" data-toggle="modal" data-target="#suppModal">Delete
+            </button>
+          </td>
+          <td>
+            <button (click)="editContact(c.id)" class="btn btn-success" >Edite
+            </button>
+          </td>
+        </tr>
+      </table>
+      <div class="container">
+        <ul class="nav navbar nav-pills">
+          <li [ngClass]="{active:i==page}" *ngFor="let p of pages;let i=index">
+            <a (click)="gotopage(i)" class="clickable">{{i}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="suppModal" class="modal" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">Vous voulez supprimer le contact?</div>
+      <div class="modal-body">Supprimer contact !</div>
+      <div class="modal-footer">
+        <button class="btn btn-danger" (click)="ondeleteContact()" data-dismiss="modal">Delete</button>
+        <button class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
