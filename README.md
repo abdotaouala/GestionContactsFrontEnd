@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # ContactsWeb
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.5.
@@ -26,6 +27,10 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+=======
+# GestionContactsFrontEnd
+SYSTEMES MASSIVEMENT DISTRIBUEES BASE SUR LES MICRO-SERVICES : FroantEnd Angular4
+>>>>>>> 3030f44c04fd2e56be434971fd31e5d02e3193be
 =======
 # GestionContactsFrontEnd
 SYSTEMES MASSIVEMENT DISTRIBUEES BASE SUR LES MICRO-SERVICES : FroantEnd Angular4
